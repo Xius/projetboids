@@ -71,6 +71,8 @@ class Agent
     bool near(Agent &other) const;
 
     double* V1(int pos, Agent* Shield, int size);
+
+    double* V2(int pos, Agent* Shield, int size);
     // =======================================================================
     //                             Public Attributes
     // =======================================================================
