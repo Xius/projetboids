@@ -12,6 +12,7 @@
 // ===========================================================================
 #include <stdlib.h>
 #include <stdio.h>
+#include "Agent.h"
 //#include "bwindows.h"
 
 
@@ -37,8 +38,8 @@
 // ===========================================================================
 int main(int argc, char* argv[])
 {
-  printf("Hello World !\n");
-
+  Agent* bond = new Agent();
+  printf("x = %lf, y = %lf\n", bond->get_position()[0], bond->get_position()[1]);
   return 0;
 }
 
