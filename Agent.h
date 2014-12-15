@@ -68,11 +68,15 @@ class Agent
     // =======================================================================
     //                              Public Methods
     // =======================================================================
-    bool near(Agent &other) const;
+    bool nearR(Agent &other) const;
+
+    bool nearC(Agent &other) const;
 
     double* V1(int pos, Agent* Shield, int size);
 
     double* V2(int pos, Agent* Shield, int size);
+
+    double* V3(int pos, Agent* Shield, int size);
     // =======================================================================
     //                             Public Attributes
     // =======================================================================
