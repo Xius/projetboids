@@ -43,7 +43,7 @@ int main(int argc, char* argv[])
   Agent* bond = new Agent();
   Agent* romanoff = new Agent();
   printf("x = %lf, y = %lf\n", bond->get_position()[0], bond->get_position()[1]);
-  printf("x = %d\n", bond->near(*romanoff));
+  printf("x = %d\n", bond->nearR(*romanoff));
   return 0;
 }
 
