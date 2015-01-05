@@ -13,6 +13,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "Agent.h"
+#include "Boids.h"
 #include <ctime>
 //#include "bwindows.h"
 
