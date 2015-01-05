@@ -116,7 +116,6 @@ class Agent
     double* position;
     double* speed; 
     double R;
-    double* gam;
 };
 
 
