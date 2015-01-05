@@ -77,6 +77,10 @@ class Agent
     double* V2(int pos, Agent* Shield, int size);
 
     double* V3(int pos, Agent* Shield, int size);
+
+    void Vtot(Agent* Shield, int size, int pos);
+
+    void newcoord(Agent* Shield)
     // =======================================================================
     //                             Public Attributes
     // =======================================================================

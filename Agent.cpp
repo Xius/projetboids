@@ -147,6 +147,15 @@ double* Agent::V3(int pos, Agent* Shield, int size)
 	V3[1]= -V3[1]/nb;
 	return V3;
 }
+
+void Agent::Vtot(Agent* Shield, int size, int pos)
+{
+	double* speed1 = V1(pos, Shield, size);
+	double* speed2 = V2(pos, Shield, size);
+	double* speed3 = V3(pos, Shield, size);
+	speed[0] = speed[0] + TIME*(gam1*speed1[0]+gam2*speed2[0]+gam3*speed3[0]);
+	speed[1] = speed[1] + TIME*(gam1*speed1[1]+gam2*speed2[1]+gam3*speed3[1]);
+}
 // ===========================================================================
 //                                Protected Methods
 // ===========================================================================
