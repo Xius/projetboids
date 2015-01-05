@@ -41,7 +41,7 @@
 int main(int argc, char* argv[])
 {
   srand(time(NULL));
-  Agent* bond = new Agent();
+  /*Agent* bond = new Agent();
   Agent* romanoff = new Agent();
   printf("x = %lf, y = %lf\n", bond->get_position()[0], bond->get_position()[1]);
   printf("x = %d\n ", bond->nearC(*romanoff));
@@ -49,7 +49,11 @@ int main(int argc, char* argv[])
   printf("x = %d\n", bond->nearR(*romanoff));
   bond->newcoord(bond, 2, 1);
   printf( "new coord : x = %lf, y = %lf",bond->get_position()[0], bond->get_position()[1] );
-  return 0;
+  return 0;*/
+  // test classe boids
+  Boids shield = Boids(5);
+  
+
 }
 
 
