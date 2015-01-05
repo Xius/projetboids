@@ -80,7 +80,7 @@ class Agent
 
     void Vtot(Agent* Shield, int size, int pos);
 
-    void newcoord(Agent* Shield)
+    void newcoord(Agent* Shield, int pos, int size);
     // =======================================================================
     //                             Public Attributes
     // =======================================================================

@@ -101,9 +101,9 @@ double* Agent::V1(int pos, Agent* Shield, int size)
 			{
 				V1[0] = V1[0] + Shield[i].get_speed()[0] - speed[0];
 				V1[1] = V1[1] + Shield[i].get_speed()[1] - speed[1];
-				nb++;
 			}
-	}
+		nb++;
+	}	
 	V1[0]= V1[0]/nb;
 	V1[1]= V1[1]/nb;
 	return V1;
@@ -121,8 +121,8 @@ double* Agent::V2(int pos, Agent* Shield, int size)
 			{
 				V2[0] = V2[0] + Shield[i].get_position()[0] - position[0];
 				V2[1] = V2[1] + Shield[i].get_position()[1] - position[1];
-				nb++;
 			}
+		nb++;
 	}
 	V2[0]= V2[0]/nb;
 	V2[1]= V2[1]/nb;
@@ -140,8 +140,8 @@ double* Agent::V3(int pos, Agent* Shield, int size)
 			{
 				V3[0] = V3[0] + Shield[i].get_position()[0] - position[0];
 				V3[1] = V3[1] + Shield[i].get_position()[1] - position[1];
-				nb++;
 			}
+		nb++;
 	}
 	V3[0]= -V3[0]/nb;
 	V3[1]= -V3[1]/nb;
@@ -155,6 +155,12 @@ void Agent::Vtot(Agent* Shield, int size, int pos)
 	double* speed3 = V3(pos, Shield, size);
 	speed[0] = speed[0] + TIME*(gam1*speed1[0]+gam2*speed2[0]+gam3*speed3[0]);
 	speed[1] = speed[1] + TIME*(gam1*speed1[1]+gam2*speed2[1]+gam3*speed3[1]);
+}
+void Agent::newcoord(Agent* Shield, int pos, int size)
+{
+	Vtot(Shield, size, pos);
+	position[0] = position[0] + TIME*speed[0];
+	position[1] = position[1] + TIME*speed[1];
 }
 // ===========================================================================
 //                                Protected Methods
