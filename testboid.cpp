@@ -46,7 +46,8 @@ int main(int argc, char* argv[])
   printf("x = %d\n ", bond->nearC(*romanoff));
 
   printf("x = %d\n", bond->nearR(*romanoff));
-
+  bond->newcoord(bond, 2, 1);
+  printf( "new coord : x = %lf, y = %lf",bond->get_position()[0], bond->get_position()[1] );
   return 0;
 }
 
