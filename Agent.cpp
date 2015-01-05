@@ -162,6 +162,10 @@ void Agent::newcoord(Agent* Shield, int pos, int size)
 	position[0] = position[0] + TIME*speed[0];
 	position[1] = position[1] + TIME*speed[1];
 }
+void Agent::printcoord(void) const
+{
+	printf(" x=%lf, y=%lf\n", position[0], position[1]);
+}
 // ===========================================================================
 //                                Protected Methods
 // ===========================================================================
