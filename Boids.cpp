@@ -17,6 +17,7 @@
 //                                 Project Files
 // ===========================================================================
 #include "Boids.h"
+#include "param.h"
 
 
 
@@ -43,10 +44,11 @@ Boids::Boids(void)
 Boids::Boids(int size)
 {
 	int i = 0;
+	nbA = size;
 	flock = new Agent[size];
 	for(i=0; i<nbA; i++)
 	{
-		flock[i]= Agent();
+		flock[i].printcoord();
 	}
 
 }
@@ -70,6 +72,16 @@ int Boids::get_NBA(void)
 {
 	return nbA;
 }
+void Boids::nextflock(void)
+{
+	int i;
+	for(i=0;i<nbA;i++)
+	{
+		flock[i].newcoord(flock, nbA, i);
+		printf("les positions sont x= %lf et y =%lf",flock[i].get_position()[0], flock[i].get_position()[1]);
+	}
+}
+
 // ===========================================================================
 //                                Protected Methods
 // ===========================================================================

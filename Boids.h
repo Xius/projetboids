@@ -68,11 +68,12 @@ class Boids
     //                              Public Methods
     // =======================================================================
     void nextflock(void);
+    Agent* get_flock(void);
+    int get_NBA(void);
+   
     // =======================================================================
     //                             Public Attributes
     // =======================================================================
-    Agent* flock;
-    int nbA;
 
 
 
@@ -87,11 +88,11 @@ class Boids
       printf("%s:%d: error: call to forbidden constructor.\n", __FILE__, __LINE__);
       exit(EXIT_FAILURE);
     };*/
-    Boids(const Boids &model)
+    /*Boids(const Boids &model)
     {
       printf("%s:%d: error: call to forbidden constructor.\n", __FILE__, __LINE__);
       exit(EXIT_FAILURE);
-    };
+    };*/
 
 
     // =======================================================================
@@ -101,6 +102,8 @@ class Boids
     // =======================================================================
     //                             Protected Attributes
     // =======================================================================
+    Agent* flock;
+    int nbA;
 };
 
 
