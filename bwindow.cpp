@@ -216,3 +216,27 @@ unsigned int bwindow::get_height()
     return height;
 }
 
+
+
+void bwindow::draw_boids(Boids &shield)
+{
+    int i;
+    double* tab= new double[2];
+    tab[0] = 0;
+    tab[1] = 0;
+
+    for(i=0; i<shield.get_NBA(); i++)
+    {
+        tab[0]=shield.get_flock()[i].get_position()[0];
+        tab[1]=shield.get_flock()[i].get_position()[1];
+        int x= (int)(tab[0]);
+        int y= (int)(tab[1]);
+        printf("y= %d\n", y);
+        this->draw_fsquare(x-1,y-1,x+1,y+1,0xFF0000);
+    }
+
+
+
+
+
+}

@@ -1,8 +1,8 @@
-#define WIDTH  50
-#define HEIGHT 50
-#define R  5
+#define WIDTH  320
+#define HEIGHT 240
+#define R  200
 #define TIME  1
-#define C 1
-#define gam1 1
-#define gam2 1
-#define gam3 1
+#define C 50
+#define gam1 0.1
+#define gam2 0.1
+#define gam3 0.1

@@ -3,6 +3,8 @@
 #include <X11/Xos.h>
 #include <X11/keysymdef.h>
 #include <X11/keysym.h>
+#include "Agent.h"
+#include "Boids.h"
 
 #define ERR_BAD_FONT -10
 #define ERR_BAD_DISPLAY -5
@@ -79,6 +81,8 @@ class bwindow
     void draw_fsquare(int x1, int y1, int x2, int y2, unsigned int color);
 // ***** draw_point(): put a pixel at x1,y1 with color color
     void draw_point(int x1, int y1, unsigned int color);
+
+    void draw_boids(Boids &flock);
  
     
 
@@ -86,5 +90,7 @@ class bwindow
     char * get_lastkey();
     unsigned int get_width();
     unsigned int get_height();
+
+
 
 };

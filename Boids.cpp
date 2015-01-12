@@ -57,7 +57,8 @@ Boids::Boids(int size)
 // ===========================================================================
 Boids::~Boids(void)
 {
-	delete flock;
+	delete[] flock;
+	nbA = 0;
 }
 
 // ===========================================================================
@@ -74,11 +75,13 @@ int Boids::get_NBA(void)
 }
 void Boids::nextflock(void)
 {
-	int i;
+	int i=0;
 	for(i=0;i<nbA;i++)
 	{
-		flock[i].newcoord(flock, nbA, i);
-		printf("les positions sont x= %lf et y =%lf",flock[i].get_position()[0], flock[i].get_position()[1]);
+		flock[i].newcoord(flock, i, nbA);
+		flock[i].printcoord();
+
+		//printf("les positions sont x= %lf et y =%lf",flock[i].get_position()[0], flock[i].get_position()[1]);
 	}
 }
 

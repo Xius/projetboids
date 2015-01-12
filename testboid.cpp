@@ -15,7 +15,7 @@
 #include "Agent.h"
 #include "Boids.h"
 #include <ctime>
-//#include "bwindows.h"
+
 
 
 // ===========================================================================
@@ -51,7 +51,9 @@ int main(int argc, char* argv[])
   printf( "new coord : x = %lf, y = %lf",bond->get_position()[0], bond->get_position()[1] );
   return 0;*/
   // test classe boids
-  Boids shield = Boids(5);
+  Boids shield = Boids(10);
+  shield.nextflock();
+  return 0;
   
 
 }
