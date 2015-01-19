@@ -5,7 +5,8 @@
 #include <X11/keysym.h>
 #include "Agent.h"
 #include "Boids.h"
-
+#include "Pred.h"
+#include "param.h"
 #define ERR_BAD_FONT -10
 #define ERR_BAD_DISPLAY -5
 #define MIN_WIDTH 350

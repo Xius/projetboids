@@ -6,8 +6,8 @@
 
 
 
-#ifndef __AGENT_H__
-#define __AGENT_H__
+#ifndef __Pred_H__
+#define __Pred_H__
 
 
 // ===========================================================================
@@ -15,7 +15,8 @@
 // ===========================================================================
 #include <cstdio>
 #include <cstdlib>
-#include "param.h"
+#include "Param.h"
+#include "Agent.h"
 
 
 // ===========================================================================
@@ -34,7 +35,7 @@
 
 
 
-class Agent
+class Pred : public Agent
 {
   public :
     
@@ -45,18 +46,16 @@ class Agent
     // =======================================================================
     //                               Constructors
     // =======================================================================
-    Agent(void);
-
+    Pred();
     // =======================================================================
     //                                Destructor
     // =======================================================================
-    virtual ~Agent(void);
+    virtual ~Pred(void);
 
     // =======================================================================
     //                            Accessors: getters
     // =======================================================================
-    double* get_position(void);
-    double* get_speed(void);
+
     // =======================================================================
     //                            Accessors: setters
     // =======================================================================
@@ -68,31 +67,11 @@ class Agent
     // =======================================================================
     //                              Public Methods
     // =======================================================================
-    bool nearR(Agent &other) const;
 
-    bool nearC(Agent &other) const;
-
-    //bool nearP(Agent &other) const;
-
-    bool nearOBS(Agent &other) const;
-
-    double* V1(int pos, Agent* Shield, int size);
-
-    double* V2(int pos, Agent* Shield, int size);
-
-    double* V3(int pos, Agent* Shield, int size);
-
-    //double* V4(int pos, Agent* Shield, int size);
-
-    void Vtot(Agent* Shield, int size, int pos);
-
-    void newcoord(Agent* Shield, int pos, int size);
-
-    void printcoord(void) const;
+   
     // =======================================================================
     //                             Public Attributes
     // =======================================================================
-
 
 
 
@@ -102,16 +81,16 @@ class Agent
     // =======================================================================
     //                            Forbidden Constructors
     // =======================================================================
-    /*Agent(void)
+    /*Pred(void)
     {
       printf("%s:%d: error: call to forbidden constructor.\n", __FILE__, __LINE__);
       exit(EXIT_FAILURE);
     };*/
-    Agent(const Agent &model)
+    /*Pred(const Pred &model)
     {
       printf("%s:%d: error: call to forbidden constructor.\n", __FILE__, __LINE__);
       exit(EXIT_FAILURE);
-    };
+    };*/
 
 
     // =======================================================================
@@ -121,8 +100,8 @@ class Agent
     // =======================================================================
     //                             Protected Attributes
     // =======================================================================
-    double* position;
-    double* speed; 
+    double VPmax;
+    double huntrange;
 };
 
 
@@ -143,5 +122,5 @@ class Agent
 // ===========================================================================
 
 
-#endif // __Agent_H__
+#endif // __Pred_H__
 

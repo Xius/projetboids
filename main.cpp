@@ -5,7 +5,7 @@
 #include <ctime>
 #include "bwindow.h"
 #include "param.h"
-
+#include "Pred.h"
 
 int main()
 {
@@ -13,7 +13,8 @@ int main()
     printf("%d\n",win.init());
     win.map();
     srand(time(NULL));
-	Boids shield = Boids(10);
+	Boids shield = Boids(100);
+	Pred predators;
     for(;;)
     {
 		int ev = win.parse_event();
@@ -31,6 +32,7 @@ int main()
 			printf("configure\n"); break;
 		}
 		win.draw_fsquare(0,0,640,480,0xFFFFFF);
+		win.draw_fsquare(CENTEROBSTACLE - 5,CENTEROBSTACLE -5,CENTEROBSTACLE + 5,CENTEROBSTACLE + 5,0xFF00);
 		win.draw_boids(shield);
 		shield.nextflock();
 		usleep(100000);

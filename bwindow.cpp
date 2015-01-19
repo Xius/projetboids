@@ -231,7 +231,6 @@ void bwindow::draw_boids(Boids &shield)
         tab[1]=shield.get_flock()[i].get_position()[1];
         int x= (int)(tab[0]);
         int y= (int)(tab[1]);
-        printf("y= %d\n", y);
         this->draw_fsquare(x-1,y-1,x+1,y+1,0xFF0000);
     }
 
